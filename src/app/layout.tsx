@@ -21,6 +21,7 @@ export default function RootLayout({
     <html lang="de">
       <head>
         <link href="https://fonts.cdnfonts.com/css/bodoni" rel="stylesheet" />
+        <link href="https://fonts.cdnfonts.com/css/cantarell" rel="stylesheet" />
       </head>
       {/* Removed font variables from body className, font will be applied via globals.css */}
       <body className="antialiased flex flex-col min-h-screen">
