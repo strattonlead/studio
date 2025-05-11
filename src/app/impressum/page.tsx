@@ -57,7 +57,7 @@ export default function ImpressumPage() {
                 Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: 
                 <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline"> https://ec.europa.eu/consumers/odr</a>.
               </p>
-              <p>Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
+              <p>Unsere E-Mail-Adresse findest du oben im Impressum.</p>
               <p>
                 Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer 
                 Verbraucherschlichtungsstelle teilzunehmen.
@@ -67,7 +67,7 @@ export default function ImpressumPage() {
             <section>
               <h2 className="text-xl font-semibold text-foreground mb-2">Datenschutz:</h2>
               <p>
-                Ausführliche Informationen zum Datenschutz finden Sie in unserer Datenschutzerklärung: 
+                Ausführliche Informationen zum Datenschutz findest du in unserer Datenschutzerklärung: 
                 {/* TODO: Add Link to Privacy Policy page if it exists */}
                 {/* <Link href="/datenschutz" className="text-primary hover:underline">Datenschutzerklärung</Link> */}
                  (Platzhalter für Link zur Datenschutzerklärung)

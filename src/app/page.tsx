@@ -36,11 +36,11 @@ export default function Home() {
       </section>
 
       {/* Booking Iframe Section */}
-      <section id="booking" className="py-16 md:py-24 bg-background">
+      <section id="booking" className="py-16 md:py-24 bg-transparent"> {/* Changed bg-background to bg-transparent */}
         <div className="container mx-auto px-4">
           <AnimatedElement animationType="fadeIn" delay={200}>
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
-              Ihr nächster Traumlook ist nur einen Klick entfernt
+              Dein nächster Traumlook ist nur einen Klick entfernt
             </h2>
           </AnimatedElement>
           <AnimatedElement animationType="fadeIn" delay={400}>
