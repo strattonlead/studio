@@ -47,6 +47,8 @@
     --sidebar-accent-foreground: 0 0% 10%;
     --sidebar-border: 45 20% 85%;
     --sidebar-ring: 22 14% 64%;
+
+    --font-bodoni: 'Bodoni MT', serif; /* Define Bodoni font variable */
   }
 
   .dark {
@@ -76,6 +78,8 @@
     --sidebar-accent-foreground: 45 33% 93%;
     --sidebar-border: 0 0% 20%;
     --sidebar-ring: 0 0% 74%;
+    
+    --font-bodoni: 'Bodoni MT', serif; /* Define Bodoni font variable for dark theme */
   }
 }
 
@@ -85,7 +89,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-geist-sans);
+    font-family: var(--font-bodoni); /* Use the Bodoni font variable */
     background-image: url('/background-sand.jpg');
     background-size: cover;
     background-position: center;

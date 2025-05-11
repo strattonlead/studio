@@ -1,19 +1,11 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+// Removed Geist and Geist_Mono imports
 import './globals.css';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster";
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
+// Removed geistSans and geistMono const declarations
 
 export const metadata: Metadata = {
   title: 'Hair & Skin Couture - Because blonde is more than just a shade',
@@ -27,7 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
+      <head>
+        <link href="https://fonts.cdnfonts.com/css/bodoni" rel="stylesheet" />
+      </head>
+      {/* Removed font variables from body className, font will be applied via globals.css */}
+      <body className="antialiased flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow pt-16 md:pt-20">
           {children}
