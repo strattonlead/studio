@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -10,13 +11,13 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)] min-h-[600px] flex items-center justify-center text-center text-white overflow-hidden">
         <Image
-          src="https://picsum.photos/seed/salonbrightbg/1920/1080"
-          alt="Heller Salon Hintergrund"
+          src="/background-sand.jpg"
+          alt="Warmer Sand Textur Hintergrund für den Salon"
           layout="fill"
           objectFit="cover"
           className="z-0"
           priority
-          data-ai-hint="bright salon interior"
+          data-ai-hint="sand texture"
         />
         <div className="absolute inset-0 bg-black/30 z-10"></div> {/* Dark overlay for text contrast */}
         
@@ -51,3 +52,4 @@ export default function Home() {
     </>
   );
 }
+
