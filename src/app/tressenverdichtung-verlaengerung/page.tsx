@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import { AnimatedElement } from "@/components/animated-element";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -43,7 +44,7 @@ export default function TressenPage() {
                 </CardHeader>
                 <CardContent className="p-0">
                   <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                    Dabei arbeiten wir besonders schonend und typgerecht – für ein natürliches Ergebnis, das sich sehen (und fühlen) lassen kann.
+                    Der Vorteil von Tressen liegt darin, dass sie ganz ohne Kleber oder Hitze auskommen. Sie sind besonders schonend zum Eigenhaar und zur Kopfhaut, bieten ein angenehm leichtes Tragegefühl und wirken dabei unsichtbar und absolut natürlich. Zudem sind sie nachhaltig: Bei richtiger Pflege kannst du deine Tressen über mehrere Monate hinweg problemlos verwenden. Unsere Echthaartressen verfügen über ein feines Silikonband, das besonders flach am Kopf anliegt und so für einen optimalen, unauffälligen Sitz sorgt.
                   </p>
                   <ul className="space-y-4 mb-6">
                     {features.map((feature, index) => (

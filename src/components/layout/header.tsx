@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -29,6 +30,7 @@ export function Header() {
   }, []);
   
   useEffect(() => {
+    // Close sheet on pathname change
     setIsSheetOpen(false);
   }, [pathname]);
 
@@ -73,17 +75,24 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] bg-background p-6">
               <div className="flex flex-col h-full">
-                <div className="flex justify-between items-center mb-8">
+                {/* Logo Section - The X button from SheetContent is absolutely positioned by default */}
+                <div className="mb-6">
                    <Link href="/" className="text-lg font-bold flex items-center group">
                      <Sparkles className="mr-2 h-5 w-5 text-primary" />
                      Hair & Skin Couture
                    </Link>
+                </div>
+
+                {/* "Termin Buchen" button - Moved to the top */}
+                <div className="mb-8">
                   <SheetClose asChild>
-                     <Button variant="ghost" size="icon" aria-label="Menü schließen">
-                       <X className="h-6 w-6 text-primary" />
-                     </Button>
+                    <Button asChild className="w-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg transition-shadow rounded-full py-3 text-lg">
+                       <Link href="/termin-buchen">Termin Buchen</Link>
+                    </Button>
                   </SheetClose>
                 </div>
+
+                {/* Nav links */}
                 <nav className="flex flex-col space-y-4">
                   {navLinks.map((link) => (
                     <SheetClose asChild key={link.href}>
@@ -99,11 +108,7 @@ export function Header() {
                     </SheetClose>
                   ))}
                 </nav>
-                <div className="mt-auto pt-8">
-                  <Button asChild className="w-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg transition-shadow rounded-full py-3 text-lg">
-                     <Link href="/termin-buchen">Termin Buchen</Link>
-                  </Button>
-                </div>
+                {/* The "Termin Buchen" button was previously here with mt-auto, it's now at the top. */}
               </div>
             </SheetContent>
           </Sheet>
