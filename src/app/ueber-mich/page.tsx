@@ -17,12 +17,12 @@ export default function UeberMichPage() {
         <AnimatedElement animationType="flyInLeft" className="md:col-span-2">
           <div className="relative aspect-square md:aspect-[3/4] rounded-lg overflow-hidden shadow-xl mx-auto max-w-md md:max-w-none">
             <Image
-              src="https://picsum.photos/seed/jana/600/800"
-              alt="Jana Schnebel - Friseurmeisterin"
+              src="/jana-mit-hund.jpg" // Updated image source
+              alt="Jana Schnebel mit ihrem Hund" // Updated alt text
               layout="fill"
               objectFit="cover"
               className="rounded-lg"
-              data-ai-hint="professional woman portrait"
+              data-ai-hint="woman dog" // Updated AI hint
             />
           </div>
         </AnimatedElement>

@@ -53,7 +53,7 @@ export function Header() {
               key={link.href}
               href={link.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
+                "text-sm font-medium transition-colors hover:text-primary font-sans", // Added font-sans
                 pathname === link.href ? "text-primary" : (isScrolled ? "text-foreground" : "text-foreground"),
               )}
             >
@@ -73,43 +73,37 @@ export function Header() {
                 <Menu className={cn("h-6 w-6", isScrolled ? "text-primary" : "text-foreground")} />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] bg-background p-6">
-              <div className="flex flex-col h-full">
-                {/* Logo Section - The X button from SheetContent is absolutely positioned by default */}
-                <div className="mb-6">
-                   <Link href="/" className="text-lg font-bold flex items-center group">
-                     <Sparkles className="mr-2 h-5 w-5 text-primary" />
-                     Hair & Skin Couture
-                   </Link>
-                </div>
-
-                {/* "Termin Buchen" button - Moved to the top */}
-                <div className="mb-8">
-                  <SheetClose asChild>
-                    <Button asChild className="w-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg transition-shadow rounded-full py-3 text-lg">
-                       <Link href="/termin-buchen">Termin Buchen</Link>
-                    </Button>
-                  </SheetClose>
-                </div>
-
-                {/* Nav links */}
-                <nav className="flex flex-col space-y-4">
-                  {navLinks.map((link) => (
-                    <SheetClose asChild key={link.href}>
-                      <Link
-                        href={link.href}
-                        className={cn(
-                          "text-lg font-medium transition-colors hover:text-primary",
-                          pathname === link.href ? "text-primary" : "text-foreground"
-                        )}
-                      >
-                        {link.label}
-                      </Link>
-                    </SheetClose>
-                  ))}
-                </nav>
-                {/* The "Termin Buchen" button was previously here with mt-auto, it's now at the top. */}
+            <SheetContent side="right" className="w-[300px] bg-background p-6 flex flex-col">
+              <div className="mb-6">
+                 <Link href="/" className="text-lg font-bold flex items-center group">
+                   <Sparkles className="mr-2 h-5 w-5 text-primary" />
+                   Hair & Skin Couture
+                 </Link>
               </div>
+
+              <div className="mb-8">
+                <SheetClose asChild>
+                  <Button asChild className="w-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg transition-shadow rounded-full py-3 text-lg">
+                     <Link href="/termin-buchen">Termin Buchen</Link>
+                  </Button>
+                </SheetClose>
+              </div>
+
+              <nav className="flex flex-col space-y-4">
+                {navLinks.map((link) => (
+                  <SheetClose asChild key={link.href}>
+                    <Link
+                      href={link.href}
+                      className={cn(
+                        "text-lg font-medium transition-colors hover:text-primary font-sans", // Added font-sans
+                        pathname === link.href ? "text-primary" : "text-foreground"
+                      )}
+                    >
+                      {link.label}
+                    </Link>
+                  </SheetClose>
+                ))}
+              </nav>
             </SheetContent>
           </Sheet>
         </div>
