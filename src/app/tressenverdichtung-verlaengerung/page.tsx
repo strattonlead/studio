@@ -37,7 +37,7 @@ export default function TressenPage() {
       <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <AnimatedElement animationType="flyInLeft" className="order-2 md:order-1">
+            <AnimatedElement animationType="flyInRight" className="order-1 md:order-2">
               <Card className="bg-card shadow-xl rounded-lg p-6 md:p-8">
                 <CardHeader className="p-0 pb-6">
                   <CardTitle className="text-3xl font-semibold text-foreground">Unsere Tressen-Technik:</CardTitle>
@@ -60,15 +60,15 @@ export default function TressenPage() {
                 </CardContent>
               </Card>
             </AnimatedElement>
-            <AnimatedElement animationType="flyInRight" className="order-1 md:order-2">
+            <AnimatedElement animationType="flyInLeft" className="order-2 md:order-1">
               <div className="relative aspect-square md:aspect-[4/5] rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src="https://picsum.photos/seed/tressen/600/750"
-                  alt="Haarverlängerung mit Tressen"
+                  src="/tressen-blond.jpg" 
+                  alt="Haarverlängerung mit Tressen - Blondes Haar"
                   layout="fill"
                   objectFit="cover"
                   className="rounded-lg"
-                  data-ai-hint="hair extensions model"
+                  data-ai-hint="blonde hair extensions"
                 />
               </div>
             </AnimatedElement>
@@ -78,3 +78,4 @@ export default function TressenPage() {
     </div>
   );
 }
+
