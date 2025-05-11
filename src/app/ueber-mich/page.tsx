@@ -13,7 +13,7 @@ const qualities = [
 export default function UeberMichPage() {
   return (
     <div className="container mx-auto px-4 py-12 md:py-20">
-      <div className="grid md:grid-cols-5 gap-8 md:gap-12 items-center">
+      <div className="grid md:grid-cols-5 gap-8 md:gap-12 items-start">
         <AnimatedElement animationType="flyInLeft" className="md:col-span-2">
           <div className="relative aspect-square md:aspect-[3/4] rounded-lg overflow-hidden shadow-xl mx-auto max-w-md md:max-w-none">
             <Image
@@ -33,11 +33,19 @@ export default function UeberMichPage() {
             <p className="text-xl text-secondary font-semibold">Friseurmeisterin</p>
           </header>
           
-          <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-            Ich bin Jana Schnebel, Friseurmeisterin mit Spezialisierung auf Langhaar, Balayage und Blond. Seit vielen Jahren begleite ich Kundinnen dabei, ihren ganz persönlichen Look zu finden – modern, typgerecht und mit Liebe zum Detail.
-          </p>
+          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <p>
+              Hallo, ich bin Jana. Ich bin seit zwölf Jahren Friseurin und habe vor zwei Jahren – kurz nach meinem Meisterabschluss – meinen eigenen Salon eröffnet.
+              Als Blond-Spezialistin gehören Balayage, Airtouch, Babylights und Tressenverlängerungen zu meinen Fachgebieten.
+              Wenn du schon immer davon geträumt hast, blond zu sein, zögere nicht, mich zu kontaktieren – ich helfe dir gerne, deinen Wunsch Wirklichkeit werden zu lassen.
+            </p>
+            <p>
+              Hi, my name is Jana. I have been a hairdresser for twelve years. I opened my salon two years ago, shortly after finishing my master&apos;s degree.
+              Being a blonde specialist, balayage, air touch, babylights and weft extensions are my expertise. If you ever wished to be blonde, don&apos;t hesitate to contact me so l can help you make your dream a reality.
+            </p>
+          </div>
           
-          <Card className="bg-card shadow-lg rounded-lg">
+          <Card className="bg-card shadow-lg rounded-lg mt-8">
             <CardHeader>
               <CardTitle className="text-2xl text-foreground">Was mich auszeichnet:</CardTitle>
             </CardHeader>
