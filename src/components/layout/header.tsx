@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X } from 'lucide-react'; // Removed Sparkles import
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
@@ -40,9 +40,13 @@ export function Header() {
       isScrolled ? "bg-background/95 shadow-lg backdrop-blur-sm" : "bg-transparent"
     )}>
       <div className="container mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
-        <Link href="/" className="text-xl md:text-2xl font-bold flex items-center group">
-          <Sparkles className={cn("mr-2 h-5 w-5 transition-colors", isScrolled ? "text-primary" : "text-foreground group-hover:text-primary")} />
-          <span className={cn("transition-colors", isScrolled ? "text-primary" : "text-foreground group-hover:text-primary")}>
+        {/* Removed Sparkles icon and related classes */}
+        <Link href="/" className="text-xl md:text-2xl font-bold group">
+          <span className={cn(
+            "transition-colors", 
+            isScrolled ? "text-primary" : "text-foreground", 
+            "group-hover:text-primary" // Keep hover effect on text
+          )}>
             Hair & Skin Couture
           </span>
         </Link>
@@ -53,7 +57,7 @@ export function Header() {
               key={link.href}
               href={link.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-primary font-sans", // Added font-sans
+                "text-sm font-medium transition-colors hover:text-primary font-sans",
                 pathname === link.href ? "text-primary" : (isScrolled ? "text-foreground" : "text-foreground"),
               )}
             >
@@ -75,8 +79,8 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] bg-background p-6 flex flex-col">
               <div className="mb-6">
-                 <Link href="/" className="text-lg font-bold flex items-center group">
-                   <Sparkles className="mr-2 h-5 w-5 text-primary" />
+                {/* Removed Sparkles icon from mobile sheet */}
+                 <Link href="/" className="text-lg font-bold group">
                    Hair & Skin Couture
                  </Link>
               </div>
@@ -95,7 +99,7 @@ export function Header() {
                     <Link
                       href={link.href}
                       className={cn(
-                        "text-lg font-medium transition-colors hover:text-primary font-sans", // Added font-sans
+                        "text-lg font-medium transition-colors hover:text-primary font-sans",
                         pathname === link.href ? "text-primary" : "text-foreground"
                       )}
                     >
