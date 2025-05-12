@@ -65,7 +65,7 @@ export default function ErgebnissePage() {
           <Info className="h-5 w-5 text-secondary" />
           <AlertTitle className="font-semibold text-foreground">Wichtiger Hinweis</AlertTitle>
           <AlertDescription className="text-muted-foreground">
-            Bitte beachten Sie, dass bei einigen der gezeigten Ergebnisse zuvor Fremdarbeiten geleistet wurden. 
+            Bitte beachte, dass bei einigen der gezeigten Ergebnisse zuvor Fremdarbeiten geleistet wurden. 
             Die Nachher-Bilder zeigen die Korrektur und das von uns erzielte Endergebnis. 
             Wir legen größten Wert auf eine typgerechte Beratung und handwerkliche Perfektion.
           </AlertDescription>
