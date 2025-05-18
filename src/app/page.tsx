@@ -28,7 +28,7 @@ export default function Home() {
             HAIR & SKIN COUTURE
           </AnimatedElement>
           <AnimatedElement animationType="fadeIn" delay={800} duration={1000} as="p" className="text-xl md:text-3xl mb-8 font-light">
-            Blonde isn’t just a color — it’s a statement.
+          Not your average hairstylist
           </AnimatedElement>
           <AnimatedElement animationType="fadeIn" delay={1200} duration={1000}>
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/80 rounded-full px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-shadow font-sans">
