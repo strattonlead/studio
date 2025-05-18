@@ -25,7 +25,7 @@ export function ImageGallery({ items, className }: ImageGalleryProps) {
         <Card key={item.id} className="overflow-hidden shadow-lg rounded-lg bg-card group">
           <CardContent className="p-0">
             <div className="grid grid-cols-2">
-              <div className="relative aspect-[3/4] overflow-hidden">
+              <div className="relative aspect-[9/16] overflow-hidden">
                 <Image
                   src={item.beforeSrc}
                   alt={item.beforeAlt}
@@ -36,7 +36,7 @@ export function ImageGallery({ items, className }: ImageGalleryProps) {
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-center py-1.5 text-xs font-semibold tracking-wider">VORHER</div>
               </div>
-              <div className="relative aspect-[3/4] overflow-hidden">
+              <div className="relative aspect-[9/16] overflow-hidden">
                 <Image
                   src={item.afterSrc}
                   alt={item.afterAlt}

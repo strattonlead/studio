@@ -109,3 +109,7 @@
 .font-sans {
   font-family: var(--font-sans);
 }
+
+.aspect-\[9\/16\] {
+  aspect-ratio: 9 / 16;
+}
