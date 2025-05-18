@@ -37,11 +37,12 @@ export default function UeberMichPage() {
             <p>
               Hallo, ich bin Jana. Ich bin seit zwölf Jahren Friseurin und habe vor zwei Jahren – kurz nach meinem Meisterabschluss – meinen eigenen Salon eröffnet.
               Als Blond-Spezialistin gehören Balayage, Airtouch, Babylights und Tressenverlängerungen zu meinen Fachgebieten.
-              Wenn du schon immer davon geträumt hast, blond zu sein, zögere nicht, mich zu kontaktieren – ich helfe dir gerne, deinen Wunsch Wirklichkeit werden zu lassen.
+              Ich freue mich darauf, dich bald persönlich in meinem Salon zu einem Beratungstermin begrüßen zu dürfen, damit wir gemeinsam deinen Traum vom perfekten Haar verwirklichen können.
             </p>
             <p>
               Hi, my name is Jana. I have been a hairdresser for twelve years. I opened my salon two years ago, shortly after finishing my master&apos;s degree.
-              Being a blonde specialist, balayage, air touch, babylights and weft extensions are my expertise. If you ever wished to be blonde, don&apos;t hesitate to contact me so l can help you make your dream a reality.
+              Being a blonde specialist, balayage, air touch, babylights and weft extensions are my expertise. 
+              I'm looking forward to welcoming you to my salon for a personal consultation – so we can bring your dream of perfect hair to life together.
             </p>
           </div>
           

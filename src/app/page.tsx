@@ -41,7 +41,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <AnimatedElement animationType="fadeIn" delay={200}>
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
-              Dein nächster Traumlook ist nur einen Klick entfernt
+              BUCHE JETZT DEINEN TERMIN
             </h2>
           </AnimatedElement>
           <AnimatedElement animationType="fadeIn" delay={400}>

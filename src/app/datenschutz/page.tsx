@@ -7,7 +7,7 @@ export default function DatenschutzPage() {
   return (
     <div className="container mx-auto px-4 py-12 md:py-20">
       <AnimatedElement animationType="flyInBottom" as="header" className="text-center mb-12 md:mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-foreground">Datenschutzerklärung</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-foreground">DATENSCHUTZERKLÄRUNG</h1>
       </AnimatedElement>
 
       <AnimatedElement animationType="fadeIn" delay={200}>
