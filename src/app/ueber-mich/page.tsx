@@ -29,7 +29,7 @@ export default function UeberMichPage() {
 
         <AnimatedElement animationType="flyInRight" className="md:col-span-3">
           <header className="mb-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-3">Jana Schnebel – mit Herz und Können</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-3">JANA SCHNEBEL</h1>
             <p className="text-xl text-secondary font-semibold">Friseurmeisterin</p>
           </header>
           

@@ -50,9 +50,9 @@ export default function ErgebnissePage() {
   return (
     <div className="container mx-auto px-4 py-12 md:py-20">
       <AnimatedElement animationType="flyInBottom" as="header" className="text-center mb-12 md:mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-foreground">Glänzende Beispiele für dein neues Ich</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-foreground">ERGEBNISSE</h1>
         <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-          Hier steht deine Verwandlung im Mittelpunkt. Ob natürliches Blond, weiche Farbverläufe oder maximale Haarfülle – unsere Galerie zeigt dir echte Ergebnisse, echte Kundinnen und echte Begeisterung.
+          Hier stehen deine Wünsche im Mittelpunkt. Ob natürliches Blond, weiche Farbverläufe, Aufbau-Treatment wie Haar-Botox oder maximale Haarfülle.
         </p>
       </AnimatedElement>
 

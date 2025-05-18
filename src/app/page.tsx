@@ -25,7 +25,7 @@ export default function Home() {
           <AnimatedElement animationType="flyInBottom" delay={200} duration={800} as="h1" className="text-5xl sm:text-6xl md:text-7xl mb-4">
             HAIR & SKIN COUTURE
           </AnimatedElement>
-          <AnimatedElement animationType="fadeIn" delay={800} duration={1000} as="p" className="text-xl sm:text-xl md:text-3xl mb-8 font-light">
+          <AnimatedElement animationType="fadeIn" delay={800} duration={1000} as="p" className="text-xl md:text-3xl mb-8 font-light">
             Blonde isn’t just a color — it’s a statement.
           </AnimatedElement>
           <AnimatedElement animationType="fadeIn" delay={1200} duration={1000}>
