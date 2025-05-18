@@ -11,7 +11,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)] min-h-[600px] flex items-center justify-center text-center text-white overflow-hidden">
         <Image
-          src="/background-sand.jpg?v=2"
+          src="/background-sand.jpg"
           alt="Warmer Sand Textur Hintergrund für den Salon"
           layout="fill"
           objectFit="cover"
