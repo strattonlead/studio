@@ -12,7 +12,7 @@ const galleryItems: GalleryItem[] = [
     afterSrc: "/dunkel-zu-blond-balayage-nachher.jpg",
     afterAlt: "Nachher Bild 1 - Helles Blond Balayage",
     afterHint: "blonde balayage",
-    description: "Von dunklem Haar zu strahlendem Blond Balayage.",
+    description: "Blond Balayage Fresh-Up.",
   },
   {
     id: "2",
@@ -22,7 +22,7 @@ const galleryItems: GalleryItem[] = [
     afterSrc: "/haar-korrektur-blond-nachher.jpg",
     afterAlt: "Nachher Bild 2 - Farbkorrektur zu kühlem Blond",
     afterHint: "cool blonde correction",
-    description: "Farbkorrektur und Übergang zu einem kühlen Blondton.",
+    description: "Farbkorrektur wird zum stahlendem Blond.",
   },
   {
     id: "3",
@@ -42,7 +42,7 @@ const galleryItems: GalleryItem[] = [
     afterSrc: "/aufhellung-nachher.jpg",
     afterAlt: "Nachher Bild 4 - Scandinavian Hairline",
     afterHint: "scandinavian hairline blonde",
-    description: "Perfekte Scandinavian Hairline für einen natürlichen Übergang.",
+    description: "Sanfte Aufhellung für ein natürliches Finish.",
   },
 ];
 
