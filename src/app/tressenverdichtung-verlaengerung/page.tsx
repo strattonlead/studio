@@ -16,7 +16,7 @@ export default function TressenPage() {
     <div className="bg-background">
       <section className="relative py-20 md:py-32 text-center text-white overflow-hidden">
         <Image
-          src="https://picsum.photos/seed/longhairbg/1920/800"
+          src="/banner.jpg"
           alt="Langes, voluminöses Haar"
           layout="fill"
           objectFit="cover"

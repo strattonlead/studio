@@ -88,7 +88,7 @@ export function Header() {
               <div className="mb-8">
                 <SheetClose asChild>
                   <Button asChild className="w-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg transition-shadow rounded-full py-3 text-lg">
-                     <Link href="/termin-buchen">Termin Buchen</Link>
+                     <Link href="/termin-buchen">Termin buchen</Link>
                   </Button>
                 </SheetClose>
               </div>
