@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 
 export function Footer() {
@@ -8,9 +9,15 @@ export function Footer() {
         <p className="text-sm mb-2">
           &copy; {currentYear} Hair & Skin Couture. Alle Rechte vorbehalten.
         </p>
-        <Link href="/impressum" className="text-sm hover:text-primary transition-colors">
-          Impressum & Datenschutz
-        </Link>
+        <div className="space-x-4">
+          <Link href="/impressum" className="text-sm hover:text-primary transition-colors">
+            Impressum
+          </Link>
+          <span className="text-sm">|</span>
+          <Link href="/datenschutz" className="text-sm hover:text-primary transition-colors">
+            Datenschutz
+          </Link>
+        </div>
       </div>
     </footer>
   );

@@ -1,5 +1,7 @@
+
 import { AnimatedElement } from "@/components/animated-element";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
 
 export default function ImpressumPage() {
   return (
@@ -15,14 +17,14 @@ export default function ImpressumPage() {
               <h2 className="text-xl font-semibold text-foreground mb-2">Angaben gemäß § 5 TMG:</h2>
               <p>Jana Schnebel</p>
               <p>Hair & Skin Couture</p>
-              <p>Kurfürstendamm [Hausnummer]</p>
-              <p>[PLZ] Berlin</p>
+              <p>Uhlandstraße 162</p>
+              <p>10719 Berlin</p>
             </section>
 
             <section>
               <h2 className="text-xl font-semibold text-foreground mb-2">Kontakt:</h2>
-              <p>Telefon: [Telefonnummer]</p>
-              <p>E-Mail: [E-Mail-Adresse]</p>
+              <p>Telefon: 0157 31108386</p>
+              <p>E-Mail: info@hairandskincouture.de</p>
             </section>
             
             <section>
@@ -33,7 +35,7 @@ export default function ImpressumPage() {
             <section>
               <h2 className="text-xl font-semibold text-foreground mb-2">Umsatzsteuer-ID:</h2>
               <p>Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz:</p>
-              <p>[USt-IdNr.]</p>
+              <p>DE356655336</p>
             </section>
 
             <section>
@@ -67,10 +69,7 @@ export default function ImpressumPage() {
             <section>
               <h2 className="text-xl font-semibold text-foreground mb-2">Datenschutz:</h2>
               <p>
-                Ausführliche Informationen zum Datenschutz findest du in unserer Datenschutzerklärung: 
-                {/* TODO: Add Link to Privacy Policy page if it exists */}
-                {/* <Link href="/datenschutz" className="text-primary hover:underline">Datenschutzerklärung</Link> */}
-                 (Platzhalter für Link zur Datenschutzerklärung)
+                Ausführliche Informationen zum Datenschutz findest du in unserer <Link href="/datenschutz" className="text-primary hover:underline">Datenschutzerklärung</Link>.
               </p>
             </section>
           </CardContent>

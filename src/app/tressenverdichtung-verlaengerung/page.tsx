@@ -26,10 +26,10 @@ export default function TressenPage() {
         <div className="absolute inset-0 bg-black/40 z-10"></div>
         <div className="container mx-auto px-4 relative z-20">
           <AnimatedElement animationType="flyInBottom" delay={200} as="h1" className="text-4xl md:text-6xl font-bold mb-4">
-            TRESSENVERDICHTUNG & VERLÄNGERUNG.
+            TRESSENVERDICHTUNG & VERLÄNGERUNG
           </AnimatedElement>
           <AnimatedElement animationType="fadeIn" delay={500} as="p" className="text-lg md:text-2xl max-w-3xl mx-auto font-light">
-            Für alle, die sich mehr Volumen oder Länge wünschen, bieten wir professionelle Haarverdichtungen und -verlängerungen mit Tressen an.
+            Du träumst schon immer von einer Haarverlägnerung- oder Verdichtung. Mit unseren Tressen kannst du ganz einfach deine Haare verlängern un ddabei dein Naturhaar und deine Kopfhaut schonen.
           </AnimatedElement>
         </div>
       </section>
