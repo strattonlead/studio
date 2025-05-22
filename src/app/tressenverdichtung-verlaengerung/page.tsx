@@ -29,7 +29,7 @@ export default function TressenPage() {
             TRESSENVERDICHTUNG & VERLÄNGERUNG
           </AnimatedElement>
           <AnimatedElement animationType="fadeIn" delay={500} as="p" className="text-lg md:text-2xl max-w-3xl mx-auto font-light">
-            Du träumst schon immer von einer Haarverlägnerung- oder Verdichtung. Mit unseren Tressen kannst du ganz einfach deine Haare verlängern un ddabei dein Naturhaar und deine Kopfhaut schonen.
+            Du träumst schon immer von einer Haarverlägnerung- oder Verdichtung. Mit unseren Tressen kannst du ganz einfach deine Haare verlängern und dabei dein Naturhaar und deine Kopfhaut schonen.
           </AnimatedElement>
         </div>
       </section>
