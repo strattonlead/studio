@@ -14,7 +14,6 @@ const navLinks = [
   { href: '/ergebnisse', label: 'Ergebnisse' },
   { href: '/ueber-mich', label: 'Über Mich' },
   { href: '/tressenverdichtung-verlaengerung', label: 'Tressenverdichtung / Verlängerung' },
-  { href: '/anfahrt', label: 'Anfahrt' },
 ];
 
 export function Header() {
