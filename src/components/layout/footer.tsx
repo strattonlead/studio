@@ -8,7 +8,7 @@ export function Footer() {
     <footer className="bg-muted text-muted-foreground py-8 border-t border-border">
       <div className="container mx-auto px-4 text-center">
         <div className="flex justify-center space-x-6 mb-4">
-          <a 
+          {/* <a 
             href="https://facebook.com/yourpage" 
             target="_blank" 
             rel="noopener noreferrer" 
@@ -16,9 +16,9 @@ export function Footer() {
             className="text-muted-foreground hover:text-primary transition-colors"
           >
             <Facebook className="h-6 w-6" />
-          </a>
+          </a> */}
           <a 
-            href="https://instagram.com/yourpage" 
+            href="https://www.instagram.com/hairandskin.couture" 
             target="_blank" 
             rel="noopener noreferrer" 
             aria-label="Instagram" 
