@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 // Removed Geist and Geist_Mono imports
 import './globals.css';
 import { Header } from '@/components/layout/header';
+import CookieConsent from '@/components/cookie-consent';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster";
 
@@ -30,6 +31,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <CookieConsent />
         <Toaster />
       </body>
     </html>

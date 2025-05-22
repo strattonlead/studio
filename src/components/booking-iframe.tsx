@@ -11,6 +11,7 @@ export function BookingIframe({
 }: BookingIframeProps) {
   return (
     <div className={`aspect-[3/4] md:aspect-video max-w-4xl mx-auto w-full rounded-lg overflow-hidden shadow-xl border border-border ${className}`}>
+      <img src="/termin-platzhalter.png"></img>
       <iframe
         src={src}
         title={title}

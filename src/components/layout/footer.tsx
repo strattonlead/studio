@@ -35,6 +35,10 @@ export function Footer() {
             Impressum
           </Link>
           <span className="text-sm">|</span>
+          <Link href="/anfahrt" className="text-sm hover:text-primary transition-colors">
+            Anfahrt
+          </Link>
+          <span className="text-sm">|</span>
           <Link href="/datenschutz" className="text-sm hover:text-primary transition-colors">
             Datenschutz
           </Link>
