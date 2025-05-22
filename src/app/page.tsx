@@ -34,7 +34,9 @@ export default function Home() {
           data-ai-hint="salon atmosphere video"
           ref={videoRef}
         >
-          <source src="/hero-background-optimized.mp4" type="video/mp4" />
+          <source src="/hero-background-mobile.mp4" type="video/mp4" media="(max-width: 768px)" />
+          <source src="/hero-background-optimized.mp4" type="video/mp4" media="(min-width: 769px)"/>
+
           Dein Browser unterstützt das Video-Tag nicht.
         </video>
         <div className="absolute inset-0 bg-black/40 z-10"></div> {/* Dark overlay for text contrast, increased opacity slightly */}
