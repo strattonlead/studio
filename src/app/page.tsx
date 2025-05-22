@@ -1,13 +1,27 @@
 
+'use client';
+
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { AnimatedElement } from '@/components/animated-element';
 import { BookingIframe } from '@/components/booking-iframe';
 
+import { useRef, useEffect } from 'react';
+
 export default function Home() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const checkAndPlayVideo = () => {
+    if (videoRef.current && videoRef.current.paused) {
+      videoRef.current.play();
+    }
+  };
+
   return (
     <>
+      {/* Add a script or trigger for checkAndPlayVideo if needed */}
+      
       {/* Hero Section */}
       <section className="relative h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)] min-h-[600px] flex items-center justify-center text-center text-white overflow-hidden">
         <video
@@ -17,6 +31,7 @@ export default function Home() {
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
           data-ai-hint="salon atmosphere video"
+          ref={videoRef}
         >
           <source src="/hero-background-muted.mp4" type="video/mp4" />
           Dein Browser unterstützt das Video-Tag nicht.
