@@ -12,8 +12,8 @@ import { cn } from '@/lib/utils';
 const navLinks = [
   { href: '/preise', label: 'Preise' },
   { href: '/ergebnisse', label: 'Ergebnisse' },
-  { href: '/ueber-mich', label: 'Über Mich' },
   { href: '/tressenverdichtung-verlaengerung', label: 'Tressenverdichtung / Verlängerung' },
+  { href: '/ueber-mich', label: 'Über Mich' },
 ];
 
 export function Header() {
