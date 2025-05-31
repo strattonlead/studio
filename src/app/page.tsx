@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { AnimatedElement } from '@/components/animated-element';
-import { BookingIframe } from '@/components/booking-iframe';
+import { BookingButton } from '@/components/booking-iframe';
 
 import { useRef, useEffect } from 'react';
 
@@ -30,6 +30,7 @@ export default function Home() {
           muted
           playsInline
           preload="auto"
+          poster="/hero-background-mobile.jpg"
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
           data-ai-hint="salon atmosphere video"
           ref={videoRef}
@@ -56,6 +57,27 @@ export default function Home() {
         </div>
       </section>
 
+      {/* New Text Section */}
+      <section className="py-16 md:py-24 bg-transparent text-center">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <AnimatedElement animationType="fadeIn" delay={100}>
+            <p className="text-lg md:text-xl text-foreground mb-6">
+              Blond ist mehr als nur eine Haarfarbe. Es ist meine Leidenschaft und mein Spezialgebiet. Mit einem feinen Gespür für Nuancen, Präzision und Stil kreiere ich individuelle Blondtöne, die perfekt zu dir passen – von natürlichen Highlights bis hin zu ikonischem Platin.
+            </p>
+          </AnimatedElement>
+          <AnimatedElement animationType="fadeIn" delay={300}>
+            <p className="text-lg md:text-xl text-foreground mb-8">
+              Ich arbeite mit hochwertigen Produkten, viel Erfahrung und Liebe zum Detail, um dein persönliches Signature Blond zu gestalten.
+            </p>
+          </AnimatedElement>
+          <AnimatedElement animationType="fadeIn" delay={500}>
+            <p className="text-xl md:text-2xl text-foreground font-semibold">
+              Dein neuer Blond-Look beginnt hier.
+            </p>
+          </AnimatedElement>
+        </div>
+      </section>
+
       {/* Booking Iframe Section */}
       <section id="booking" className="py-16 md:py-24 bg-transparent">
         <div className="container mx-auto px-4">
@@ -65,7 +87,7 @@ export default function Home() {
             </h2>
           </AnimatedElement>
           <AnimatedElement animationType="fadeIn" delay={400}>
-            <BookingIframe />
+            <BookingButton />
           </AnimatedElement>
         </div>
       </section>
