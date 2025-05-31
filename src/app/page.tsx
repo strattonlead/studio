@@ -1,11 +1,9 @@
 
 'use client';
 
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { AnimatedElement } from '@/components/animated-element';
-import { BookingButton } from '@/components/booking-iframe';
 
 import { useRef, useEffect } from 'react';
 
@@ -75,19 +73,12 @@ export default function Home() {
               Dein neuer Blond-Look beginnt hier.
             </p>
           </AnimatedElement>
-        </div>
-      </section>
-
-      {/* Booking Iframe Section */}
-      <section id="booking" className="py-16 md:py-24 bg-transparent">
-        <div className="container mx-auto px-4">
-          <AnimatedElement animationType="fadeIn" delay={200}>
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
-              BUCHE JETZT DEINEN TERMIN
-            </h2>
-          </AnimatedElement>
-          <AnimatedElement animationType="fadeIn" delay={400}>
-            <BookingButton />
+          <AnimatedElement animationType="fadeIn" delay={600}>
+            <div className="flex justify-center my-16"> {/* Add this div for centering */}
+              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/80 rounded-full px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-shadow font-sans">
+                <Link href="/termin-buchen">Jetzt Termin buchen</Link>
+              </Button>
+            </div> 
           </AnimatedElement>
         </div>
       </section>
