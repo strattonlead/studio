@@ -1,5 +1,5 @@
 import { AnimatedElement } from "@/components/animated-element";
-import { BookingIframe } from "@/components/booking-iframe";
+import { BookingButton } from "@/components/booking-iframe";
 import { Button } from "@/components/ui/button";
 import { CalendarCheck } from "lucide-react";
 
@@ -15,7 +15,7 @@ export default function TerminBuchenPage() {
       </AnimatedElement>
 
       <AnimatedElement animationType="fadeIn" delay={300}>
-        <BookingIframe />
+        <BookingButton />
       </AnimatedElement>
 
       <AnimatedElement animationType="fadeIn" delay={500} className="text-center mt-12">
