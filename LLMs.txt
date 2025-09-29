@@ -1,3 +1,26 @@
+# llms.txt — AI usage policy for hairandskincouture.de
+version: 1
+site: https://hairandskincouture.de/
+owner: Hair & Skin Couture
+contact: https://hairandskincouture.de/
+generated: 2025-09-29T16:21:45Z
+
+# Scope
+paths-allowed:
+  - /
+paths-disallowed:
+  - /admin
+
+# AI usage policy (publisher preferences)
+crawl: allow               # crawling/reading content
+index: allow               # indexing content for answering user questions
+answering: allow           # using content to answer end-user queries
+training: disallow         # do NOT use content to train or fine-tune models
+embedding: allow           # vector embeddings for search/QA are OK
+cache: allow-temporary     # short-term caching OK; long-term storage not allowed
+redistribution: disallow   # do not republish or mirror full content
+attribution: required-link # include a visible link to the source when content is used
+
 # Hair & Skin Couture - Because blonde is more than just a shade
 
 Dein Friseursalon in Berlin am Kurfürstendamm, spezialisiert auf Blond, Langhaar, Balayage und Haarverlängerung.
