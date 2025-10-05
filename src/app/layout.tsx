@@ -21,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="de">
       <head>
+        <meta name="llms-txt" content="https://hairandskincouture.de/llms.txt" />
         <link href="https://fonts.cdnfonts.com/css/bodoni" rel="stylesheet" />
         <link href="https://fonts.cdnfonts.com/css/cantarell" rel="stylesheet" />
       </head>
