@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
-import { Menu, X } from 'lucide-react'; // Removed Sparkles import
+import { Menu } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
@@ -25,82 +25,117 @@ export function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
+
   useEffect(() => {
-    // Close sheet on pathname change
     setIsSheetOpen(false);
   }, [pathname]);
 
   return (
-    <header className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      isScrolled ? "bg-background/95 shadow-lg backdrop-blur-sm" : "bg-transparent"
-    )}>
+    <header
+      className={cn(
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-couture',
+        isScrolled
+          ? 'bg-background/85 backdrop-blur-md shadow-[0_1px_0_0_hsl(var(--gold)/0.35),0_8px_24px_-12px_hsl(0_0%_0%/0.2)]'
+          : 'bg-transparent'
+      )}
+    >
       <div className="container mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
-        {/* Removed Sparkles icon and related classes */}
-        <Link href="/" className="text-xl md:text-2xl font-bold group">
-          <span className={cn(
-            "transition-colors", 
-            isScrolled ? "text-primary" : "text-foreground", 
-            "group-hover:text-primary" // Keep hover effect on text
-          )}>
-            Hair & Skin Couture
+        <Link href="/" className="group flex flex-col leading-tight">
+          <span
+            className={cn(
+              'font-display text-lg md:text-xl tracking-[0.18em] transition-colors',
+              !isScrolled && 'header-over-hero text-white',
+              isScrolled && 'text-ink'
+            )}
+          >
+            HAIR &amp; SKIN
+          </span>
+          <span
+            className={cn(
+              'font-serif italic text-xs md:text-sm tracking-[0.5em] -mt-0.5 transition-colors',
+              !isScrolled && 'header-over-hero text-white/85',
+              isScrolled && 'text-muted-foreground'
+            )}
+          >
+            couture
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-primary font-sans",
-                pathname === link.href ? "text-primary" : (isScrolled ? "text-foreground" : "text-foreground"),
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
+        <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
+          {navLinks.map((link) => {
+            const active = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                data-active={active}
+                className={cn(
+                  'nav-link text-[13px] font-medium tracking-[0.16em] uppercase font-sans transition-colors',
+                  !isScrolled && 'header-over-hero text-white/90 hover:text-white',
+                  isScrolled && (active ? 'text-ink' : 'text-foreground hover:text-ink')
+                )}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="flex items-center space-x-3">
-          <Button asChild className="hidden md:inline-flex bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg transition-shadow rounded-full px-6 py-3">
+          <Button
+            asChild
+            className="hidden md:inline-flex btn-shimmer bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-7 py-3 tracking-[0.18em] text-[11px] uppercase font-sans shadow-md hover:shadow-lg transition-shadow"
+          >
             <Link href="/termin-buchen">Termin Buchen</Link>
           </Button>
 
           <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild className="md:hidden">
               <Button variant="ghost" size="icon" aria-label="Menü öffnen">
-                <Menu className={cn("h-6 w-6", isScrolled ? "text-primary" : "text-foreground")} />
+                <Menu
+                  className={cn(
+                    'h-6 w-6 transition-colors',
+                    isScrolled ? 'text-ink' : 'text-white drop-shadow-md'
+                  )}
+                />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] bg-background p-6 flex flex-col">
-              <div className="mb-6">
-                {/* Removed Sparkles icon from mobile sheet */}
-                 <Link href="/" className="text-lg font-bold group">
-                   Hair & Skin Couture
-                 </Link>
+            <SheetContent side="right" className="w-[320px] bg-background p-8 flex flex-col">
+              <div className="mb-8">
+                <Link href="/" className="group flex flex-col leading-tight">
+                  <span className="font-display text-xl tracking-[0.18em] text-ink">
+                    HAIR &amp; SKIN
+                  </span>
+                  <span className="font-serif italic text-sm tracking-[0.5em] text-muted-foreground -mt-0.5">
+                    couture
+                  </span>
+                </Link>
               </div>
 
-              <div className="mb-8">
+              <div className="mb-10">
                 <SheetClose asChild>
-                  <Button asChild className="w-full bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg transition-shadow rounded-full py-3 text-lg">
-                     <Link href="/termin-buchen">Termin buchen</Link>
+                  <Button
+                    asChild
+                    className="btn-shimmer w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-full py-4 tracking-[0.18em] text-xs uppercase shadow-md hover:shadow-lg transition-shadow"
+                  >
+                    <Link href="/termin-buchen">Termin buchen</Link>
                   </Button>
                 </SheetClose>
               </div>
 
-              <nav className="flex flex-col space-y-4">
+              <nav className="flex flex-col space-y-5">
                 {navLinks.map((link) => (
                   <SheetClose asChild key={link.href}>
                     <Link
                       href={link.href}
+                      data-active={pathname === link.href}
                       className={cn(
-                        "text-lg font-medium transition-colors hover:text-primary font-sans",
-                        pathname === link.href ? "text-primary" : "text-foreground"
+                        'nav-link text-base font-medium tracking-[0.14em] uppercase font-sans transition-colors',
+                        pathname === link.href ? 'text-ink' : 'text-foreground hover:text-ink'
                       )}
                     >
                       {link.label}
