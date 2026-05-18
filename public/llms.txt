@@ -52,3 +52,5 @@ Dein Friseursalon in Berlin am Kurfürstendamm, spezialisiert auf Blond, Langhaa
 [Anfahrt](https://hairandskincouture.de/anfahrt): Directions to the salon, providing clients with guidance on how to reach the location easily.
 
 [Datenschutz](https://hairandskincouture.de/datenschutz): Information regarding data protection policies, outlining how client information is handled and safeguarded in compliance with privacy regulations.
+
+[Förderung](https://hairandskincouture.de/foerderung): EU/EFRE funding notice — the Meistergründungsprämie co-financed by the European Regional Development Fund (EFRE) that supported the salon's founding.
