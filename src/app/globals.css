@@ -5,40 +5,45 @@
 @layer base {
   :root {
     --background: 45 33% 93%; /* #efebdc - Light Cream */
-    --foreground: 0 0% 0%;    /* #000000 - Black */
+    --foreground: 0 0% 8%;    /* warm near-black for body text */
+    --ink: 0 0% 8%;           /* warm near-black */
 
     --card: 0 0% 100%;        /* #ffffff - White */
-    --card-foreground: 0 0% 0%; /* #000000 - Black */
+    --card-foreground: 0 0% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover-foreground: 0 0% 8%;
 
-    --primary: 0 0% 0%;        /* #000000 - Black (for prominent CTAs like "Termin Buchen") */
-    --primary-foreground: 0 0% 100%; /* #ffffff - White */
+    --primary: 0 0% 0%;        /* #000000 - Black (for prominent CTAs) */
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 22 14% 64%;   /* #af9f96 - Taupe */
-    --secondary-foreground: 0 0% 100%; /* #ffffff - White */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 45 33% 88%;       /* Slightly darker cream for muted backgrounds */
-    --muted-foreground: 22 10% 40%; /* Darker taupe for muted text */
+    --muted: 45 33% 88%;
+    --muted-foreground: 22 10% 40%;
 
-    --accent: 0 0% 74%;        /* #BDBDBD - Light Grey */
-    --accent-foreground: 0 0% 0%; /* #000000 - Black */
+    --accent: 0 0% 74%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 45 20% 85%;       /* Lighter cream for borders */
+    --border: 45 20% 85%;
     --input: 45 20% 85%;
-    --ring: 22 14% 64%;        /* Taupe for focus rings */
+    --ring: 36 38% 52%;        /* gold focus ring */
     --radius: 0.5rem;
+
+    /* Couture gold accent — used at <=5% surface area */
+    --gold: 36 38% 52%;        /* #B29460 */
+    --gold-soft: 36 38% 88%;
 
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    
+
     --sidebar-background: 45 33% 97%;
     --sidebar-foreground: 0 0% 10%;
     --sidebar-primary: 22 14% 64%;
@@ -47,20 +52,17 @@
     --sidebar-accent-foreground: 0 0% 10%;
     --sidebar-border: 45 20% 85%;
     --sidebar-ring: 22 14% 64%;
-
-    --font-bodoni: 'Bodoni MT', serif;
-    --font-cantarell: 'Cantarell', sans-serif;
-    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   .dark {
     --background: 0 0% 10%;
     --foreground: 45 33% 93%;
+    --ink: 45 33% 93%;
     --card: 0 0% 12%;
     --card-foreground: 45 33% 93%;
     --popover: 0 0% 12%;
     --popover-foreground: 45 33% 93%;
-    --primary: 0 0% 93%; 
+    --primary: 0 0% 93%;
     --primary-foreground: 0 0% 0%;
     --secondary: 22 14% 30%;
     --secondary-foreground: 45 33% 93%;
@@ -70,7 +72,10 @@
     --accent-foreground: 45 33% 93%;
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 0 0% 74%;
+    --ring: 36 38% 60%;
+
+    --gold: 36 45% 65%;
+    --gold-soft: 36 25% 25%;
 
     --sidebar-background: 0 0% 10%;
     --sidebar-foreground: 45 33% 93%;
@@ -80,10 +85,6 @@
     --sidebar-accent-foreground: 45 33% 93%;
     --sidebar-border: 0 0% 20%;
     --sidebar-ring: 0 0% 74%;
-    
-    --font-bodoni: 'Bodoni MT', serif;
-    --font-cantarell: 'Cantarell', sans-serif;
-    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 }
 
@@ -93,23 +94,270 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-cantarell); /* Use Cantarell for body text */
+    font-family: var(--font-body), system-ui, sans-serif;
     background-image: url('/background-sand.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    font-feature-settings: "kern" 1, "liga" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-bodoni); /* Use Bodoni for headings */
+    font-family: var(--font-display), 'Bodoni MT', serif;
+    font-feature-settings: "kern" 1, "liga" 1, "lnum" 1;
   }
 }
 
 .font-sans {
-  font-family: var(--font-sans);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), 'Bodoni MT', serif;
+}
+
+.font-serif {
+  font-family: var(--font-serif), 'Cormorant Garamond', Georgia, serif;
 }
 
 .aspect-\[9\/16\] {
   aspect-ratio: 9 / 16;
+}
+
+/* ============================================================
+   Couture atmospheric layers — grain + vignette
+   ============================================================ */
+
+.couture-grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.06;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 220px 220px;
+  animation: grainShift 8s steps(8) infinite;
+}
+
+.couture-vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 50%,
+    hsl(0 0% 0% / 0.06) 80%,
+    hsl(0 0% 0% / 0.14) 100%
+  );
+}
+
+@keyframes grainShift {
+  0%   { transform: translate(0, 0); }
+  10%  { transform: translate(-3%, -2%); }
+  20%  { transform: translate(2%, 3%); }
+  30%  { transform: translate(-1%, 4%); }
+  40%  { transform: translate(3%, -3%); }
+  50%  { transform: translate(-2%, 2%); }
+  60%  { transform: translate(1%, -4%); }
+  70%  { transform: translate(-3%, 3%); }
+  80%  { transform: translate(2%, 1%); }
+  90%  { transform: translate(-1%, -2%); }
+  100% { transform: translate(0, 0); }
+}
+
+/* ============================================================
+   Hero — cinematic letter reveal + Ken Burns + draw-line
+   ============================================================ */
+
+.hero-letter {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(22px);
+  animation: letterReveal 1100ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+  will-change: transform, opacity, filter;
+}
+
+.hero-letter--space {
+  width: 0.35em;
+}
+
+@keyframes letterReveal {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(22px);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+.hero-rule {
+  display: block;
+  height: 1px;
+  width: 0;
+  margin: 1.25rem auto;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    hsl(var(--gold) / 0.0) 5%,
+    hsl(var(--gold) / 0.9) 50%,
+    hsl(var(--gold) / 0.0) 95%,
+    transparent 100%
+  );
+  animation: drawLine 900ms ease-out 1200ms forwards;
+}
+
+@keyframes drawLine {
+  to { width: min(180px, 60vw); }
+}
+
+.hero-video {
+  animation: kenBurns 22s ease-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes kenBurns {
+  0%   { transform: scale(1.06) translate(0, 0); }
+  100% { transform: scale(1.0) translate(-1%, -1%); }
+}
+
+.hero-vignette {
+  background:
+    radial-gradient(ellipse at center, transparent 30%, hsl(0 0% 0% / 0.55) 100%),
+    linear-gradient(to bottom, hsl(0 0% 0% / 0.15) 0%, hsl(0 0% 0% / 0.45) 50%, hsl(0 0% 0% / 0.6) 100%);
+}
+
+.hero-scroll-cue {
+  animation: scrollCue 2.6s ease-in-out infinite;
+}
+
+@keyframes scrollCue {
+  0%, 100% { transform: translateY(0); opacity: 0.55; }
+  50%      { transform: translateY(8px); opacity: 1; }
+}
+
+/* ============================================================
+   Button shimmer (primary CTA hover)
+   ============================================================ */
+
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 30%,
+    hsl(var(--gold) / 0.35) 50%,
+    transparent 70%
+  );
+  transform: translateX(-120%);
+  transition: transform 800ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+.btn-shimmer:hover::after {
+  transform: translateX(120%);
+}
+
+/* ============================================================
+   Nav link animated underline
+   ============================================================ */
+
+.nav-link {
+  position: relative;
+  padding-bottom: 4px;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: hsl(var(--gold));
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 360ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.nav-link:hover::after,
+.nav-link[data-active="true"]::after {
+  transform: scaleX(1);
+}
+.nav-link[data-active="true"] {
+  letter-spacing: 0.04em;
+}
+
+/* ============================================================
+   Editorial eyebrow + drop-cap
+   ============================================================ */
+
+.eyebrow {
+  font-family: var(--font-serif), serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.drop-cap::first-letter {
+  font-family: var(--font-display), 'Bodoni MT', serif;
+  font-size: 3.4em;
+  font-weight: 500;
+  float: left;
+  line-height: 0.9;
+  margin: 0.1em 0.12em 0 0;
+  color: hsl(var(--ink));
+}
+
+/* ============================================================
+   Header — text-shadow over hero video for legibility
+   ============================================================ */
+
+.header-over-hero {
+  text-shadow: 0 1px 14px hsl(0 0% 0% / 0.4), 0 1px 2px hsl(0 0% 0% / 0.25);
+}
+
+/* ============================================================
+   Reduced motion — disable all decorative motion
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .couture-grain,
+  .hero-video,
+  .hero-letter,
+  .hero-rule,
+  .hero-scroll-cue,
+  .btn-shimmer::after,
+  .nav-link::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .hero-letter {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+  .hero-rule {
+    width: min(180px, 60vw);
+  }
 }
