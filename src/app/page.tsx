@@ -4,33 +4,10 @@
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { AnimatedElement } from '@/components/animated-element';
+import { HeroTitle } from '@/components/hero-title';
 import { Ornament } from '@/components/ornament';
 import { ChevronDown } from 'lucide-react';
 import { useRef } from 'react';
-
-const HERO_TITLE = 'HAIR & SKIN COUTURE';
-const LETTER_BASE_DELAY = 250;
-const LETTER_STEP = 55;
-
-function HeroTitle() {
-  return (
-    <h1
-      className="font-display text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-2 tracking-[0.18em] sm:tracking-[0.24em] font-normal"
-      aria-label={HERO_TITLE}
-    >
-      {HERO_TITLE.split('').map((char, i) => (
-        <span
-          key={`${char}-${i}`}
-          aria-hidden="true"
-          className={`hero-letter${char === ' ' ? ' hero-letter--space' : ''}`}
-          style={{ animationDelay: `${LETTER_BASE_DELAY + i * LETTER_STEP}ms` }}
-        >
-          {char === ' ' ? ' ' : char}
-        </span>
-      ))}
-    </h1>
-  );
-}
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -68,7 +45,7 @@ export default function Home() {
             Berlin — Kurfürstendamm
           </p>
 
-          <HeroTitle />
+          <HeroTitle lines={['HAIR & SKIN', 'COUTURE']} />
 
           <span className="hero-rule" aria-hidden="true" />
 

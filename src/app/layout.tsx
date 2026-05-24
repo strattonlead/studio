@@ -5,6 +5,7 @@ import { Header } from '@/components/layout/header';
 import CookieConsent from '@/components/cookie-consent';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster";
+import { WhatsAppFab } from '@/components/whatsapp-fab';
 
 const bodoniModa = Bodoni_Moda({
   subsets: ['latin'],
@@ -52,6 +53,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <CookieConsent />
+        <WhatsAppFab />
         <Toaster />
       </body>
     </html>
