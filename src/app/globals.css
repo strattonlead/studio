@@ -338,6 +338,25 @@
 }
 
 /* ============================================================
+   WhatsApp floating action button — pulse ring
+   ============================================================ */
+
+.whatsapp-fab__pulse {
+  animation: whatsappPulse 2.4s cubic-bezier(0.2, 0.7, 0.2, 1) infinite;
+  will-change: transform, opacity;
+}
+.whatsapp-fab:hover .whatsapp-fab__pulse {
+  animation-play-state: paused;
+  opacity: 0;
+}
+
+@keyframes whatsappPulse {
+  0%   { transform: scale(1);    opacity: 0.55; }
+  80%  { opacity: 0; }
+  100% { transform: scale(1.55); opacity: 0; }
+}
+
+/* ============================================================
    Reduced motion — disable all decorative motion
    ============================================================ */
 
@@ -348,7 +367,8 @@
   .hero-rule,
   .hero-scroll-cue,
   .btn-shimmer::after,
-  .nav-link::after {
+  .nav-link::after,
+  .whatsapp-fab__pulse {
     animation: none !important;
     transition: none !important;
   }
@@ -359,5 +379,8 @@
   }
   .hero-rule {
     width: min(180px, 60vw);
+  }
+  .whatsapp-fab__pulse {
+    opacity: 0;
   }
 }

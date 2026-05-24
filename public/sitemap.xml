@@ -6,7 +6,7 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://hairandskincouture.de/</loc>
-  <lastmod>2025-09-29T16:21:25+00:00</lastmod>
+  <lastmod>2026-05-24T00:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
@@ -16,22 +16,22 @@
 </url>
 <url>
   <loc>https://hairandskincouture.de/ergebnisse</loc>
-  <lastmod>2025-09-29T16:21:25+00:00</lastmod>
+  <lastmod>2026-05-24T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://hairandskincouture.de/tressenverdichtung-verlaengerung</loc>
-  <lastmod>2025-09-29T16:21:25+00:00</lastmod>
+  <lastmod>2026-05-24T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://hairandskincouture.de/ueber-mich</loc>
-  <lastmod>2025-09-29T16:21:25+00:00</lastmod>
+  <lastmod>2026-05-24T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://hairandskincouture.de/termin-buchen</loc>
-  <lastmod>2025-09-29T16:21:25+00:00</lastmod>
+  <lastmod>2026-05-24T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -54,6 +54,4 @@
   <lastmod>2026-05-18T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
-
 </urlset>

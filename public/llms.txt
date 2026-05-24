@@ -1,56 +1,47 @@
-# llms.txt — AI usage policy for hairandskincouture.de
-version: 1
-site: https://hairandskincouture.de/
-owner: Hair & Skin Couture
-contact: https://hairandskincouture.de/
-generated: 2025-09-29T16:21:45Z
+# Hair & Skin Couture
 
-# Scope
-paths-allowed:
-  - /
-paths-disallowed:
-  - /admin
+> Friseursalon in Berlin am Kurfürstendamm, spezialisiert auf Blond, Langhaar, Balayage und Tressen-Haarverlängerung. Geführt von Friseurmeisterin Jana Schnebel.
 
-# AI usage policy (publisher preferences)
-crawl: allow               # crawling/reading content
-index: allow               # indexing content for answering user questions
-answering: allow           # using content to answer end-user queries
-training: disallow         # do NOT use content to train or fine-tune models
-embedding: allow           # vector embeddings for search/QA are OK
-cache: allow-temporary     # short-term caching OK; long-term storage not allowed
-redistribution: disallow   # do not republish or mirror full content
-attribution: required-link # include a visible link to the source when content is used
-
-# Hair & Skin Couture - Because blonde is more than just a shade
-
-Dein Friseursalon in Berlin am Kurfürstendamm, spezialisiert auf Blond, Langhaar, Balayage und Haarverlängerung.
+Hair & Skin Couture ist ein Atelier für Coloration und Schnitt mit Fokus auf maßgeschneiderte Blondtöne — von natürlichen Highlights bis zu ikonischem Platin — sowie schonende Tressen-Verdichtung und -Verlängerung. Die Website ist auf Deutsch verfasst; eine kurze englische Vorstellung der Inhaberin findet sich auf der „Über Mich"-Seite.
 
 ## Services
 
-[Hair & Skin Couture](https://hairandskincouture.de/): A premier hair salon located in Berlin, specializing in blonde hair, long hair, balayage techniques, and hair extensions.
+- [Startseite](https://hairandskincouture.de/): Übersicht über Atelier, Philosophie und Spezialisierung auf Blond.
+- [Preise](https://hairandskincouture.de/preise): Transparente Preisübersicht für sämtliche Coloration-, Schnitt- und Treatment-Leistungen.
+- [Tressenverdichtung & Verlängerung](https://hairandskincouture.de/tressenverdichtung-verlaengerung): Echthaartressen mit Silikonband — ohne Kleber, Hitze oder Chemie. Inklusive Beschreibung der Technik, Vorteile und des vierstufigen Behandlungsablaufs (Beratung → Auswahl → Befestigung → Pflege).
 
-[Preise](https://hairandskincouture.de/preise): Detailed pricing information for various hair services offered at the salon, ensuring transparency and clarity for clients.
+## Ergebnisse
 
-[Tressenverdichtung / Verlängerung](https://hairandskincouture.de/tressenverdichtung-verlaengerung): Information on hair thickening and extension services, highlighting techniques and options available for clients seeking to enhance their hair volume and length.
+- [Ergebnisse](https://hairandskincouture.de/ergebnisse): Interaktive Vorher-Nachher-Galerie mit vier Blond-Transformationen aus dem Atelier.
 
-## Results
+## Über
 
-[Ergebnisse](https://hairandskincouture.de/ergebnisse): A showcase of the salon's work, featuring before-and-after images and testimonials from satisfied clients, demonstrating the quality and expertise of the services provided.
+- [Über Mich](https://hairandskincouture.de/ueber-mich): Persönliche Vorstellung von Friseurmeisterin Jana Schnebel — zwölf Jahre Erfahrung, eigener Salon seit zwei Jahren, Spezialisierung auf Balayage, Airtouch, Babylights und Tressenverlängerung. Inklusive kurzer englischer Fassung.
 
-## About
+## Buchung
 
-[Über Mich](https://hairandskincouture.de/ueber-mich): A personal introduction to the salon owner, detailing their experience, qualifications, and passion for hair styling, particularly in the realm of blonde hair.
+- [Termin buchen](https://hairandskincouture.de/termin-buchen): Online-Terminbuchung über Salonkee sowie Alternativ-Kontakt per WhatsApp.
 
-## Booking
+## Optional
 
-[Termin Buchen](https://hairandskincouture.de/termin-buchen): An online booking system for clients to schedule appointments conveniently, ensuring a seamless experience for those looking to visit the salon.
+- [Impressum](https://hairandskincouture.de/impressum): Anbieterkennzeichnung nach deutschem Recht.
+- [Anfahrt](https://hairandskincouture.de/anfahrt): Wegbeschreibung und ÖPNV-Anbindung zum Salon.
+- [Datenschutz](https://hairandskincouture.de/datenschutz): Datenschutzerklärung gemäß DSGVO.
+- [Förderung](https://hairandskincouture.de/foerderung): Hinweis zur Meistergründungsprämie, ko-finanziert vom Europäischen Fonds für regionale Entwicklung (EFRE).
 
-## Additional Information
+## AI usage policy
 
-[Impressum](https://hairandskincouture.de/impressum): Legal information about the salon, including ownership details and business registration, as required by German law.
+Diese Richtlinien gelten zusätzlich zu robots.txt für KI-/LLM-Zugriffe auf hairandskincouture.de.
 
-[Anfahrt](https://hairandskincouture.de/anfahrt): Directions to the salon, providing clients with guidance on how to reach the location easily.
+- crawl: allow — Inhalte dürfen gelesen und verarbeitet werden.
+- index: allow — Inhalte dürfen indexiert werden, um Nutzerfragen zu beantworten.
+- answering: allow — Inhalte dürfen für die Beantwortung von Endnutzeranfragen verwendet werden.
+- training: disallow — Inhalte dürfen NICHT für Training oder Fine-Tuning von Modellen verwendet werden.
+- embedding: allow — Vektor-Embeddings für Suche/QA sind erlaubt.
+- cache: allow-temporary — Kurzfristiges Caching ist erlaubt; dauerhafte Speicherung nicht.
+- redistribution: disallow — Inhalte dürfen weder neu veröffentlicht noch gespiegelt werden.
+- attribution: required-link — Bei Verwendung ist ein sichtbarer Link zur Quelle erforderlich.
+- paths-allowed: `/`
+- paths-disallowed: `/admin`
 
-[Datenschutz](https://hairandskincouture.de/datenschutz): Information regarding data protection policies, outlining how client information is handled and safeguarded in compliance with privacy regulations.
-
-[Förderung](https://hairandskincouture.de/foerderung): EU/EFRE funding notice — the Meistergründungsprämie co-financed by the European Regional Development Fund (EFRE) that supported the salon's founding.
+Kontakt: https://hairandskincouture.de/impressum
